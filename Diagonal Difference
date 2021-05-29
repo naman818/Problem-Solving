@@ -1,0 +1,12 @@
+n=int(input())
+k=[]
+totlr=0
+totrl=0
+for i in range(n):
+    m=list(map(int, input().split(' ')))
+    k.append(m)
+for r in range(n):
+    totlr+=k[r][r]
+    totrl+=k[r][-(r+1)]
+result= abs(totlr-totrl)
+print(result)
